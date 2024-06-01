@@ -36,7 +36,7 @@ if (!isset($_SESSION['admin_id'])) {
     <h2>Panel de Administración</h2>
     <ul>
         <li><a href="#" onclick="cargarContenido('panel_admin.php')">Inicio</a></li>
-        <li><a href="#" onclick="cargarContenido('inventario.html')">Gestión de Inventario</a></li>
+        <li><a href="#" onclick="cargarContenido('gestion_inventario.php')">Gestión de Inventario</a></li>
         <li><a href="#" onclick="cargarContenido('estado_pedido.php')">Gestión de Pedidos</a></li>
         <li>
             <a href="#" onclick="toggleSubMenu()">Gestión de Usuarios</a>

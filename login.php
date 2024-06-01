@@ -1,6 +1,4 @@
 <?php
-
-
 require 'config/config.php';
 require 'config/conexion.php';
 require 'php/funciones.php';
@@ -111,7 +109,7 @@ if (!empty($_POST)) {
 
                 <div class="accionLogin">
                     <button type="submit">Iniciar sesión</button>
-                    <a href="registro.php" class="">Crear cuenta</a>
+                    <a href="php/registro.php" class="">Crear cuenta</a>
                 </div>
             </form>
             <p id="error-message" class="error-message"></p>
@@ -152,7 +150,6 @@ if (!empty($_POST)) {
             </div>
         </footer>
     </div>
-
 
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

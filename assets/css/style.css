@@ -742,6 +742,35 @@ button:hover {
     max-width: 100px !important;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.init {
+    text-decoration: none;
+    display: block;
+    background: var(--color_rojo);
+    color: var(--color_blanco);
+    padding: .4rem .7rem;
+    width: max-content;
+}
+
+
+
+
+
+
+
 @media screen and (max-width:768px) {
     .cont_prin {
         padding-left: 2rem !important;

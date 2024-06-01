@@ -113,7 +113,7 @@ if (!empty($productos)) { // Verificar si $productos no está vacío
                     </div>
                     <div class="col-5 col-sm-6 acciones_carrito">
                         <input type="number" min="1" max="200" step="1" value="<?php echo $cantidad ?>" size="5" name="" id="cantidad_<?php echo $id ?>" onchange="actualizaCantidad(this.value, <?php echo $id; ?>)">
-                        <a href="#" class="eliminar" data-id="<?php echo $id ?>">Eliminar</a>
+                        <a href="#" id="el" class="eliminar" data-id="<?php echo $id ?>">Eliminar</a>
                     </div>
                 </div>
                 <div class="row">
@@ -134,9 +134,17 @@ if (!empty($productos)) { // Verificar si $productos no está vacío
             <p class="h3" id="total" style="color: #fff !important;">Total a pagar: <?php echo MONEDA . number_format($total, 2, ".", ",") ?></p>
         </div>
     </div>
-    <button class="btn btn-btn mt-4 p-3" id="pagara">
-        Ir a pagar
-    </button>
+
+    <?php if (isset($_SESSION['user_cliente'])) { ?>
+        <button class="btn btn-btn mt-4 p-3" id="pagara">
+            Ir a pagar
+        </button>
+    <?php } else {  ?>
+        <a href="login.php" class="init">Primero debes iniciar sesión</a>
+        <br>
+        <br>
+    <?php } ?>
+
     </div>
 
 
@@ -150,7 +158,7 @@ if (!empty($productos)) { // Verificar si $productos no está vacío
             <p>¿Quieres a domicilio o para el local?</p>
 
             <div class="acciones_modal">
-                <a href="#">
+                <a href="php/locall.php">
                     <i class="fa-solid fa-shop"></i>
                 </a>
                 <a href="php/domicilioo.php">
@@ -194,6 +202,68 @@ if (!empty($productos)) { // Verificar si $productos no está vacío
             </div>
         </footer>
     </div>
+
+
+    <!-- Modal para eliminar producto -->
+    <div id="eliminarProductoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>¿Estás seguro de que quieres eliminar este producto?</p>
+            <button id="confirmarEliminar">Eliminar</button>
+            <br>
+            <button id="cancelarEliminar">Cancelar</button>
+        </div>
+    </div>
+
+    <style>
+        /* Estilos para el modal */
+        /* Estilos para el modal */
+        #cancelarEliminar {
+            background: red;
+        }
+        #eliminarProductoModal 
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        #el {
+            text-decoration: none;
+            background: red;
+            color: #fff;
+            padding: .3rem .5rem;
+            border-radius: 10px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 
 
     <script src="assets/js/index.js"></script>

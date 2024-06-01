@@ -136,9 +136,11 @@ body {
   fill: none;
 }
 
+
 .account-info {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 16px;
   margin-top: auto;
 }
@@ -154,6 +156,7 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+     background: var(--app-content-main-color) !important;
 }
 .account-info-name {
   font-size: 14px;
@@ -178,6 +181,11 @@ body {
 .app-icon svg {
   width: 24px;
   height: 24px;
+}
+
+.cerSe {
+  text-decoration: none;
+  padding: .3rem .5rem;
 }
 
 .app-content {
@@ -605,4 +613,57 @@ body {
 }
 .gridView .cell-label {
   opacity: 0.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.accionBt {
+  position: relative;
+}
+
+
+
+
+.modalito {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  transform: translateY(-100%);
+}
+
+.modal-contentito {
+  background: var(--filter-reset);
+  width: max-content;
+  padding: .7rem;
+}
+
+.closes {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closes:hover,
+.closes:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-contentito a {
+  color: var(--app-content-main-color);
 }
