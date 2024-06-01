@@ -17,10 +17,17 @@ $db = new database();
 $con = $db->conectar();
 $errors = [];
 
+<<<<<<< HEAD
 if (!ValidarCodigoRecuperacion($user_id, $codigo, $con)) {
     echo "No se pudo verificar la informacion";
     exit;
 }
+=======
+if(!ValidarCodigoRecuperacion($user_id, $codigo, $con)){
+  echo "No se pudo verificar la informacion";
+  exit;
+} 
+>>>>>>> 841e038f69ce0849f54286d4b5e2daa999df85c0
 
 if (!empty($_POST)) {
     $password = $_POST['password'];
@@ -38,7 +45,11 @@ if (!empty($_POST)) {
         $pash_hash = password_hash($password, PASSWORD_DEFAULT);
         if (ActualizarPassword($user_id, $pash_hash, $con)) {
             echo "<script>alert('Contraseña Modificada');</script>";
+<<<<<<< HEAD
             echo "<script>window.location.href = '../login.php';</script>";
+=======
+            echo "<script>window.location.href = 'login.php';</script>";
+>>>>>>> 841e038f69ce0849f54286d4b5e2daa999df85c0
             exit;
         } else {
             $errors[] = "Error al modificar la contraseña. Inténtalo nuevamente";
@@ -49,11 +60,15 @@ if (!empty($_POST)) {
 
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 841e038f69ce0849f54286d4b5e2daa999df85c0
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cambiar Contraseña</title>
+<<<<<<< HEAD
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -121,3 +136,37 @@ if (!empty($_POST)) {
 </body>
 
 </html>
+=======
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<header>
+    <a href="checkout.php">Carrito
+        <span id="num" class="carrito"><?php echo $num; ?></span>
+    </a>
+</header>
+
+<main>
+    <h3>Cambiar Contraseña</h3>
+    <?php foreach ($errors as $error) : ?>
+        <p><?php echo $error; ?></p>
+    <?php endforeach; ?>
+    <form action="reset_password.php" method="post" autocomplete="off">
+        <input type="hidden" name="user_id" value="<?= $user_id ?>">
+        <input type="hidden" name="codigo" value="<?= $codigo ?>">
+        <div>
+            <input type="password" name="password" id="password" placeholder="Contraseña" required>
+            <label for="password">Nueva Contraseña</label>
+        </div>
+        <div>
+            <input type="password" name="rep_password" id="rep_password" placeholder="Confirmar Contraseña" required>
+            <label for="rep_password">Confirmar Contraseña</label>
+        </div>
+        <div>
+            <button type="submit">Continuar</button>
+        </div>
+    </form>
+</main>
+</body>
+</html>
+>>>>>>> 841e038f69ce0849f54286d4b5e2daa999df85c0

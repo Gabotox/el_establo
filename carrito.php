@@ -113,7 +113,11 @@ if (!empty($productos)) { // Verificar si $productos no está vacío
                     </div>
                     <div class="col-5 col-sm-6 acciones_carrito">
                         <input type="number" min="1" max="200" step="1" value="<?php echo $cantidad ?>" size="5" name="" id="cantidad_<?php echo $id ?>" onchange="actualizaCantidad(this.value, <?php echo $id; ?>)">
+<<<<<<< HEAD
                         <a href="#" id="el" class="eliminar" data-id="<?php echo $id ?>">Eliminar</a>
+=======
+                        <a href="#" class="eliminar" data-id="<?php echo $id ?>">Eliminar</a>
+>>>>>>> 841e038f69ce0849f54286d4b5e2daa999df85c0
                     </div>
                 </div>
                 <div class="row">
@@ -134,6 +138,7 @@ if (!empty($productos)) { // Verificar si $productos no está vacío
             <p class="h3" id="total" style="color: #fff !important;">Total a pagar: <?php echo MONEDA . number_format($total, 2, ".", ",") ?></p>
         </div>
     </div>
+<<<<<<< HEAD
 
     <?php if (isset($_SESSION['user_cliente'])) { ?>
         <button class="btn btn-btn mt-4 p-3" id="pagara">
@@ -145,6 +150,11 @@ if (!empty($productos)) { // Verificar si $productos no está vacío
         <br>
     <?php } ?>
 
+=======
+    <button class="btn btn-btn mt-4 p-3" id="pagara">
+        Ir a pagar
+    </button>
+>>>>>>> 841e038f69ce0849f54286d4b5e2daa999df85c0
     </div>
 
 
@@ -158,7 +168,11 @@ if (!empty($productos)) { // Verificar si $productos no está vacío
             <p>¿Quieres a domicilio o para el local?</p>
 
             <div class="acciones_modal">
+<<<<<<< HEAD
                 <a href="php/locall.php">
+=======
+                <a href="#">
+>>>>>>> 841e038f69ce0849f54286d4b5e2daa999df85c0
                     <i class="fa-solid fa-shop"></i>
                 </a>
                 <a href="php/domicilioo.php">
@@ -204,6 +218,7 @@ if (!empty($productos)) { // Verificar si $productos no está vacío
     </div>
 
 
+<<<<<<< HEAD
     <!-- Modal para eliminar producto -->
     <div id="eliminarProductoModal" class="modal">
         <div class="modal-content">
@@ -266,6 +281,8 @@ if (!empty($productos)) { // Verificar si $productos no está vacío
     </style>
 
 
+=======
+>>>>>>> 841e038f69ce0849f54286d4b5e2daa999df85c0
     <script src="assets/js/index.js"></script>
 
     <script>

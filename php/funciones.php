@@ -125,7 +125,11 @@ function Login($usuario, $password, $con, $proceso) {
              if ($proceso == 'pago') {
                 header('Location: checkout.php');
              }else{
+<<<<<<< HEAD
                 header('location: index.php');
+=======
+                header('location:index.php');
+>>>>>>> 841e038f69ce0849f54286d4b5e2daa999df85c0
 
              }
              

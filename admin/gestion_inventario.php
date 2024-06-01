@@ -59,4 +59,9 @@ if ($resultado_pedidos && $resultado_pedidos->rowCount() > 0) {
   
 </main>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+
+>>>>>>> 841e038f69ce0849f54286d4b5e2daa999df85c0

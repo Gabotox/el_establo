@@ -521,6 +521,7 @@ body {
 }
 
 
+<<<<<<< HEAD
 .loginAd {
     width: 100%;
     min-height: 100vh;
@@ -529,6 +530,8 @@ body {
     align-items: center;
 }
 
+=======
+>>>>>>> 841e038f69ce0849f54286d4b5e2daa999df85c0
 
 
 /* FIN PIE DE PÁGINA */
@@ -742,6 +745,7 @@ button:hover {
     max-width: 100px !important;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -771,6 +775,8 @@ button:hover {
 
 
 
+=======
+>>>>>>> 841e038f69ce0849f54286d4b5e2daa999df85c0
 @media screen and (max-width:768px) {
     .cont_prin {
         padding-left: 2rem !important;
